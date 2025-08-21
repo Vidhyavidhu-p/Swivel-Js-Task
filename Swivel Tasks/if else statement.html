@@ -1,0 +1,132 @@
+<!Doctype html>
+<html>
+<head>
+<title>Mark Sheet</title>
+<link rel="stylesheet" href="mark.css">
+</head>
+<body>
+<div class="header">
+<h1>Mark Sheet</h1>
+
+
+<div class="box">
+<button onclick="tamil()">Click Me I am Display your Tamil Result</button>
+
+</div>
+
+<div class="box">
+<button onclick="english()">Click Me I am Display your English Result</button>
+</div>
+
+<div class="box">
+<button onclick="maths()">Click Me I am Display your Maths Result</button>
+</div>
+
+<div class="box">
+<button onclick="science()">Click Me I am Display your Science Result</button>
+</div>
+
+
+<div class="box">
+<button onclick="social()">Click Me I am Display your Social Result</button>
+</div>
+
+<div class="box">
+<button onclick="percentage()">Click Me I am Display your Percentage Result</button>
+</div>
+
+<script>
+let tam,eng,math,sci,soci;
+function percentage()
+{
+let tam=tamil();
+let eng=english();
+let math=maths();
+let sci=science();
+let soci=social();
+let total=tam + eng + math + sci + soci;
+let per= total /5;
+document.write("Total",total);
+document.write("percentage",per);
+}
+function tamil() {
+tam = parseFloat(prompt("Enter the tamil mark: "));
+if (tam >= 85) {
+alert("passed with marks: " + tam);
+} 
+else if (tam >= 40) {
+alert("Need Improvement: " + tam);
+} 
+else {
+alert("fail");
+}
+return tam;
+}
+
+
+function english(){
+eng=parseFloat(prompt("Enter the english mark: "));
+if (eng >= 85) {
+alert("passed with Good marks: " + eng);
+} 
+else if (eng >= 40) {
+alert(" passed with Need Improvement: " + eng);
+} 
+else {
+alert("fail");
+}
+return eng;
+}
+
+
+function maths()
+{
+math=parseFloat(prompt("Enter the Maths mark: "));
+if (math >= 85) {
+alert("passed with Good marks: " + math);
+} 
+else if (math >= 40) {
+alert(" passed with Need Improvement: " + math);
+} 
+else {
+alert("fail");
+}
+return math;
+}
+
+
+function science()
+{
+sci=parseFloat(prompt("Enter the science mark: "));
+if (sci >= 85) {
+alert("passed with Good marks: " + sci);
+} 
+else if (sci >= 40) {
+alert(" passed with Need Improvement: " + sci);
+} 
+else {
+alert("fail");
+}
+return sci;
+}
+
+function social()
+{
+soci=parseFloat(prompt("Enter the social mark: "));
+if (soci >= 85) {
+alert("passed with Good marks: " + soci);
+} 
+else if (soci >= 40) {
+alert(" passed with Need Improvement: " + soci);
+} 
+else {
+alert("fail");
+}
+return soci;
+}
+
+
+</script>
+
+</body>
+</html>

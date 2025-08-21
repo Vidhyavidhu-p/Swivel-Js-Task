@@ -1,0 +1,40 @@
+body {
+  background-color: white;
+  text-align: center; /* align items centrally */
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 100px; /* big heading */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input#display {
+  width: 400px;
+  height: 50px;
+  font-size: 30px;
+  text-align: right;
+  margin-bottom: 20px;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+button {
+  background-color: black;
+  color: white;
+  width: 100px;
+  height: 100px;
+  font-size: 30px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+}
+
+#container {
+  width: 440px; /* slightly bigger than buttons grid */
+  display: inline-block; /* center inside body */
+}

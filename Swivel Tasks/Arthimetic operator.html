@@ -1,0 +1,69 @@
+<!Doctype html>
+<html>
+<head>
+<title>Operators</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Operators</h1>
+
+<div class="container">
+
+<div class="box">
+<img src="./image/adds.png" alt="Addition Image">
+<button onclick="add()">ADDITION</button>
+</div>
+
+<div class="box">
+<img src="./image/sub.png" alt="Subtraction Image">
+<button onclick="sub()">SUBRACTION</button>
+</div>
+
+<div class="box">
+<img src="./image/mul.png" alt="Multiplication Image">
+<button onclick="mul()">MULTIPLICATION</button>
+</div>
+
+<div class="box">
+<img src="./image/div.png" alt="Division Image">
+<button onclick="div()">DIVISION</button>
+</div>
+
+<script>
+function add()
+{
+let a=parseFloat(prompt("Enter a Value"));
+let b=parseFloat(prompt("Enter b Value"));
+let sum=a+b
+alert("ADDITION RESULT: " + sum);
+}
+
+function sub()
+{
+let a=parseFloat(prompt("Enter a Value"));
+let b=parseFloat(prompt("Enter b Value"));
+let sum=a-b
+alert("SUBRACTION RESULT: " + sum);
+}
+
+function mul()
+{
+let a=parseFloat(prompt("Enter a Value"));
+let b=parseFloat(prompt("Enter b Value"));
+let sum=a*b
+alert("MULTIPLICATION RESULT: " + sum);
+}
+
+function div()
+{
+let a=parseFloat(prompt("Enter a Value"));
+let b=parseFloat(prompt("Enter b Value"));
+let sum=a/b
+alert("DIVISION RESULT: " + sum);
+}
+
+</script>
+</body>
+</html>
+
+

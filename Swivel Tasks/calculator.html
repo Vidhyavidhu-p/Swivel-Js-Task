@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Professional Calculator</title>
+<link rel="stylesheet" href="ex.css">
+</head>
+<body>
+<div class="calculator">
+<input type="text" placeholder="Type Here" id="display" >
+
+<div class="buttons">
+<button onclick="insert('7')">7</button>
+<button onclick="insert('8')">8</button>
+<button onclick="insert('9')">9</button>
+<button onclick="insert('/')" class="operator">/</button>
+
+<button onclick="insert('4')">4</button>
+<button onclick="insert('5')">5</button>
+<button onclick="insert('6')">6</button>
+<button onclick="insert('*')" class="operator">*</button>
+
+<button onclick="insert('1')">1</button>
+<button onclick="insert('2')">2</button>
+<button onclick="insert('3')">3</button>
+<button onclick="insert('-')" class="operator">-</button>
+
+<button onclick="insert('0')">0</button>
+<button onclick="insert('.')">.</button>
+<button onclick="calculate()" class="equal">=</button>
+<button onclick="insert('+')" class="operator">+</button>
+
+<button onclick="clearAll()" class="clear">AC</button>
+<button onclick="del()" class="operator">DEL</button>
+<button onclick="insert('(')" class="operator">(</button>
+<button onclick="insert(')')" class="operator">)</button>
+</div>
+</div>
+
+<script>
+let inputs = [];
+function insert(value) 
+{
+ inputs.push(value);
+ document.getElementById("display").value = inputs.join("");
+}
+
+function clearAll()
+{
+ inputs = [];
+ document.getElementById("display").value = "";
+}
+
+function del() 
+{
+ inputs.pop();
+ document.getElementById("display").value = inputs.join("");
+}
+
+function calculate() 
+{
+try {
+let result = eval(inputs.join(""));
+document.getElementById("display").value = result;
+inputs = [result.toString()];
+} 
+catch (e) {
+document.getElementById("display").value = "Error";
+inputs = [];
+}
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!Doctype html>
+<html>
+<head>
+<title>Application Form</title>
+</head>
+<body>
+<div id="form">
+<h1 id="head">Application Form</h1>
+<p>Apply your Course</p>
+<form>
+<label>Name:</label>
+<input type="text"><br><br>
+<label>Phone:</label>
+<input type="Number"><br><br>
+<label>Email</lable>
+<input type="email"><br><br>
+<label>Course:</label>
+<select>
+<option>Web Developement</option>
+<option> Digital Marketing</option>
+<option> Data Science</option>
+<option> AI</option>
+<option>ML</option>
+
+</select><br><br>
+<label>Qualification:</label>
+<input type="text"><br><br>
+<label>College Name:</label>
+<input type="text"><br><br>
+<button onclick="sum()">Submit</button>
+<button onclick="reset()">Reset</button>
+</form>
+</div>
+
+<script>
+document.getElementById("head").innerHTML="Registration Form";
+headColor=document.getElementById("head")
+headColor.style.textAlign="center";
+headColor.style.backgroundColor="black";
+headColor.style.color="white";
+
+document.getElementById("form").style.backgroundColor="red";
+styleColor=document.getElementById("form")
+styleColor.style.color="white";
+styleColor.style.textAlign="center";
+styleColor.style.width="350px";
+styleColor.style.height="400px";
+styleColor.style.marginLeft="600px";
+styleColor.style.borderRadius="20px";
+function sum()
+{
+alert("Your Form Submit");
+}
+function reset()
+{
+alert("Your Form Reset");
+}
+
+
+</script>
+</body>
+
+</html>

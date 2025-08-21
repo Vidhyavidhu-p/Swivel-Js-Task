@@ -1,0 +1,48 @@
+<!Doctype html>
+<html>
+<head>
+<meta http-equiv="refresh" content="5">
+<title>Calculations </title>
+</head>
+<body>
+<script>
+let a=parseFloat(prompt("Enter the a number:"));
+
+let choice=prompt("enter any value (+,-,*,/)");
+let b=parseFloat(prompt("Enter the b number:"));
+switch(choice)
+{
+case "+":
+sum=a + b;
+document.write("<h1 style='color:red;'>Your Addition Value:  "+sum+"</h1>");
+alert("Your Addition Value", +sum);
+break;
+case "-":
+sum=a - b;
+document.write("<h1 style='color:red;'>Your Subtraction Value:  "+sum+"</h1>");
+alert("Your subtraction Value", +sum);
+break;
+
+case "*":
+sum=a * b;
+document.write("<h1 style='color:red;'>Your Multiplication value:  "+sum+"</h1>");
+alert("Your multiplication Value", +sum);
+break;
+
+case "/":
+sum=a / b;
+document.write("<h1 style='color:red;'>Your Division Value:  "+sum+"</h1>");
+alert("Your division Value", +sum);
+break;
+
+case "%":
+sum=a % b;
+document.write("<h1 style='color:red;'>Your Modulation Value:  "+sum+"</h1>");
+alert("Your module Value", +sum);
+break;
+
+
+}
+</script>
+</body>
+</html>
