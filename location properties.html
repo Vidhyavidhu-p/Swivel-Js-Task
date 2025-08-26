@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Location Properties</title>
+</head>
+<body>
+<h1>Location Object Properties</h1>
+<p id="origin"></p>
+<p id="href"></p>
+<p id="protocol"></p>
+<p id="host"></p>
+<p id="hostname"></p>
+<p id="port"></p>
+<p id="pathname"></p>
+<p id="search"></p>
+<p id="hash"></p>
+<script>
+document.getElementById("origin").innerHTML ="Origin:" + location.origin;
+document.getElementById("href").innerHTML = "Href:" + location.href;
+document.getElementById("protocol").innerHTML = "Protocol:" + location.protocol;
+document.getElementById("host").innerHTML = "Host:" + location.host;
+document.getElementById("hostname").innerHTML = "Hostname:" + location.hostname;
+document.getElementById("port").innerHTML = "Port:" + location.port;
+document.getElementById("pathname").innerHTML = "Pathname:" + location.pathname;
+document.getElementById("search").innerHTML = "Search:" + location.search;
+document.getElementById("hash").innerHTML = "Hash:" + location.hash;
+</script>
+
+</body>
+</html>

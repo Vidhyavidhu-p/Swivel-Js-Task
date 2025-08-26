@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head><title>localstorage</title></head>
+<body>
+<h1>window object</h1>
+<h2>local storage</h2>
+<br>
+<button onclick="count()">Click me</button>
+<br>
+<p id="hellos"></p>
+<p id="demo"></p>
+<div id="hello1"></div>
+<br>
+<div id="hello2"></div>
+
+<script>
+localStorage.setItem("name", "anupriya");
+localStorage.setItem("number", "8976148989");
+//document.getElementById("demo").innerHTML = localStorage.getItem("number");
+//document.getElementById("hello1").innerHTML = localStorage.getItem("name");
+document.getElementById("hellos").innerHTML = localStorage.clickcount;
+
+function count() {
+
+if (localStorage.clickcount) 
+{
+localStorage.clickcount = Number(localStorage.clickcount) + 1;
+}
+else
+{
+localStorage.clickcount = 1;
+}
+}
+</script>
+</body>
+</html>

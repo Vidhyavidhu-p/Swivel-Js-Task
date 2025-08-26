@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Async Function</title>
+</head>
+<body>
+<h1>Async function</h1>
+<p id="demos"></p>
+
+<script>
+function disp(demo) {
+document.getElementById("demos").innerHTML = demo;
+}
+async function promise() {
+    return "async";
+}
+promise().then(
+function(value) { disp(value); }, function(error) { console.error(error); }
+);
+</script>
+</body>
+</html>
