@@ -1,0 +1,46 @@
+JavaScript -Cheat Sheet
+
+1)Declare Variables:
+    let, var, const
+
+2) Data types:
+     Number, String, Boolean, Undefined
+
+3)Arrow Function:
+     const add= (x, y) => X + Y;
+
+4)Array Method - Map
+
+5)Array Method - reduce
+
+6)Array Method - filter
+
+7)Array Method - find
+
+8)IIFE- Immediate invoke to create scope.
+
+9)Promise - handle async values.
+
+10)Handle Exceptions - Try, Catch, finally.
+
+11)Raise custom errors - Throw
+
+12)Client persistence - localStorage
+
+13) Event Listeners - Add/Remove Dom events.
+
+14)Query Selectors
+
+15)Form Handling
+
+16) Event delegation - attach listener on parent for many children.
+
+17)Error debugging
+
+18)Modules
+
+19)Default parameters - function greet()
+
+20)Operators - Addition, Subtraction, Multiplication, division
+   
+    
