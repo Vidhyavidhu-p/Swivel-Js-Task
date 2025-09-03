@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Bulb Example</title></head>
+<body>
+
+<center>
+<img src="images/bulp.jpg" id="bulb" width="200" height="200">
+</center>
+
+<script>
+let a = document.getElementById("bulb");
+a.onmouseover = function() {
+this.src = "images/bulp1.jpg";
+}
+
+a.onmouseout = function() {
+this.src = "images/bulp.jpg";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head><title>Error</title></head>
+<body>
+<h1>Range Error, Reference Error, Eval Error</h1>
+<p id="demo"></p>
+<div id="demo1"></div>
+<script>
+let n=10;
+let l, m=4;
+try
+{
+decodeURI("%%%%%"); //uri error
+eval("alert('hello')"); //syntax error (sometimes wont work)
+m= l + 1; //reference error variable if not declared 
+document.write(n.toPrecision(100)); //range error above 100
+document.text(); //type error
+}
+catch(err)
+{
+document.getElementById("demo").innerHTML=err.name;
+}
+</script>
+</body>
+</html>
