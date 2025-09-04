@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>LoginPage</title></head>
+<style>
+
+.navbar {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 14px 40px;
+ background: black;
+ border-bottom: 1px solid black;
+}
+
+.brand {
+ color: white;
+ font-size: 22px;
+}
+
+.nav-actions {
+ display: flex;
+ gap: 10px;
+ align-items: center;
+}
+
+.btn {
+ display: inline-block;
+ text-decoration: none;
+ text-align: center;
+ background: white;
+ color: black;
+ border: none;
+ padding: 9px 18px;
+ border-radius: 28px;
+ font-weight: 700;
+ cursor: pointer;
+}
+
+.btn.login {
+ border: 2px solid black;
+}
+
+.btn:hover {
+ background: pink;
+ color: black;
+}
+
+.login-container {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-height: 100vh;  
+}
+
+.login-box {
+ background: lightblue;
+ padding: 40px;
+ border-radius: 10px;
+ width: 100%;
+ max-width: 350px;
+ text-align: center;
+  }
+
+.login-box h2 { 
+ margin-bottom: 20px;
+ }
+
+.login-box label {
+ display: block;
+ text-align: left;
+ font-weight: bold;
+ margin: 10px 0 5px;
+}
+
+.login-box input {
+ width: 100%;
+ padding: 10px;
+ border: 1px solid #ccc;
+ border-radius: 6px;
+ margin-bottom: 15px;
+ font-size: 14px;
+ }
+
+ .btn 
+{
+ background: black;
+ color: white;
+ border: none;
+ padding: 10px;
+ width: 100%;
+ border-radius: 6px;
+ font-weight: bold;
+ cursor: pointer;
+}
+
+.btn:hover
+ {
+ background: pink;
+ color: black;
+ }
+
+.extra-links {
+ margin-top: 15px;
+ font-size: 14px;
+ }
+
+ .extra-links a {
+  color: #6d28d9;
+  text-decoration: none;
+  font-weight: bold;
+  }
+   
+.extra-links a:hover {
+ text-decoration: underline;
+ }
+ </style>
+</head>
+<body>
+
+<nav class="navbar">
+<div class="brand">Swivtrek Institute</div>
+<div class="nav-actions">
+<a href="formlogin.html" class="btn login">Login</a>
+<a href="formsignup.html" class="btn">Signup</a>
+</div>
+</nav>
+
+<div class="login-container">
+<div class="login-box">
+<h2>Login</h2>
+<form onsubmit="return loginCheck()">
+<label>Email</label>
+<input type="email" id="loginEmail">
+<label>Password</label>
+<input type="password" id="loginPassword">
+<button type="submit" class="btn">Login</button>
+ </form>
+
+<div class="extra-links">
+<p>Don't have an account? <a href="formsignup.html">Signup</a></p>
+</div>
+
+</div>
+</div>
+
+<script>
+function loginCheck() {
+let email = document.getElementById("loginEmail").value;
+let password = document.getElementById("loginPassword").value;
+let pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+if (!pattern.test(email)) {
+alert("Incorrect Email or Password");
+return false;
+}
+if(password.length < 8)
+{
+alert("create a password 8 character");
+return false;
+}
+alert("Login Successful! Welcome");
+return true;
+  }
+
+</script>
+</body>
+</html>

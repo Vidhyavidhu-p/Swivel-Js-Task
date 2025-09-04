@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Signup - Swivtrek Institute</title>
+  <style>
+ .navbar {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 14px 40px;
+ background: black;
+ border-bottom: 1px solid black;
+}
+
+.brand {
+ color: white;
+ font-size: 22px;
+}
+
+.nav-actions {
+ display: flex;
+ gap: 10px;
+ align-items: center;
+}
+
+.btn {
+ display: inline-block;
+ text-decoration: none;
+ text-align: center;
+ background: white;
+ color: black;
+ border: none;
+ padding: 9px 18px;
+ border-radius: 28px;
+ font-weight: 700;
+ cursor: pointer;
+}
+
+.btn.login {
+ border: 2px solid black;
+}
+
+.btn:hover {
+ background: pink;
+ color: black;
+}
+
+.signup-container {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-height:100vh;
+    }
+
+ .signup-box {
+ background: white;
+ padding: 40px;
+ border-radius: 10px;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+ width: 100%;
+ max-width: 380px;
+ text-align: center;
+}
+
+.signup-box h2 {
+ margin-bottom: 20px;
+ color: #111827;
+ }
+
+.signup-box label {
+ display: block;
+ text-align: left;
+ font-weight: bold;
+ margin: 10px 0 5px;
+ color: #333;
+ }
+
+.signup-box input {
+ width: 100%;
+ padding: 10px;
+ border: 1px solid lightgrey;
+ border-radius: 6px;
+ margin-bottom: 15px;
+ font-size: 14px;
+ }
+
+.btn {
+ background: black;
+ color: white;
+ border: none;
+ padding: 10px;
+ width: 100%;
+ border-radius: 6px;
+ font-weight: bold;
+ cursor: pointer;
+}
+
+.btn:hover {
+ background: pink;
+ color: black;
+ }
+
+.extra-links {
+ margin-top: 15px;
+ font-size: 14px;
+ }
+
+.extra-links a {
+ color: #6d28d9;
+ text-decoration: none;
+ }
+
+.extra-links a:hover {
+ text-decoration: underline;
+ }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+<div class="brand">Swivtrek Institute</div>
+<div class="nav-actions">
+<a href="formlogin.html" class="btn login">Login</a>
+<a href="formsignup.html" class="btn">Signup</a>
+</div>
+</nav>
+
+<div class="signup-container">
+<div class="signup-box">
+<h2>Create Account</h2>
+<form onsubmit="return validation()">
+<label>Full Name</label>
+<input type="text" placeholder="Enter your full name" id="name">
+
+<label>Email</label>
+<input type="email" placeholder="Enter your email" id="email">
+        
+<label>Password</label>
+<input type="password" placeholder="Enter your password" id="password">
+        
+<label>Confirm Password</label>
+<input type="password" placeholder="Re-enter your password" id="password1">
+        
+ <button type="submit" class="btn" value="Signup">Signup</button>
+ </form>
+ <div class="extra-links">
+ <p>Already have an account? <a href="formlogin.html">Login</a></p>
+ </div>
+ </div>
+ </div>
+<script>
+function validation()
+{
+let name=document.getElementById("name").value;
+let email=document.getElementById("email").value;
+let pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+let pass = document.getElementById("password").value;
+let pass1 = document.getElementById("password1").value;
+if(name =="")
+{
+alert("Fill your name");
+return false;
+}
+if(!pattern.test(email))
+{
+alert("incorrect Email id");
+return false;
+}
+if(pass.length < 8)
+{
+alert("create a password 8 Characters");
+return false;
+}
+if(pass != pass1)
+{
+alert("password not match");
+return false;
+}
+alert("form  successfullly submitted");
+return true;
+}
+
+</script>
+
+</body>
+</html>
