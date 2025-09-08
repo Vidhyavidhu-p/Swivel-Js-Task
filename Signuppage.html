@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sign Up Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+body {
+      
+font-family: 'Outfit', sans-serif;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.container {
+display: flex;
+width: 100%;
+max-width: 1000px;
+background: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(12px);
+border-radius: 20px;
+overflow: hidden;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+    /* Left Side Image */
+.image-side {
+  flex: 1;
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/026/789/417/small_2x/cute-little-girl-using-laptop-at-home-education-online-study-home-studying-distance-learning-homework-schoolgirl-children-lifestyle-concept-ai-generated-photo.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+    /* Right Side Signup */
+.signup-container {
+flex: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 40px;
+}
+
+.signup-box {
+width: 100%;
+max-width: 380px;
+background: white;
+padding: 40px;
+border-radius: 12px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+text-align: center;
+animation: fadeIn 1s ease;
+}
+
+.signup-box h2 {
+margin-bottom: 20px;
+font-size: 24px;
+color: #1e3a8a;
+}
+
+.signup-box label {
+display: block;
+text-align: left;
+font-weight: bold;
+margin: 10px 0 5px;
+color: #333;
+}
+
+.signup-box input {
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 8px;
+margin-bottom: 15px;
+font-size: 15px;
+transition: 0.3s;
+}
+
+.signup-box input:focus {
+border-color: #667eea;
+outline: none;
+box-shadow: 0 0 5px rgba(102,126,234,0.5);
+}
+
+.btn {
+background: linear-gradient(135deg, #667eea, #764ba2);
+color: white;
+border: none;
+padding: 12px;
+width: 100%;
+border-radius: 8px;
+font-weight: bold;
+cursor: pointer;
+font-size: 15px;
+transition: 0.3s;
+}
+
+.btn:hover {
+background: linear-gradient(135deg, #764ba2, #667eea);
+transform: translateY(-2px);
+ }
+
+.extra-links {
+margin-top: 15px;
+font-size: 14px;
+color: #444;
+}
+
+.extra-links a {
+color: #667eea;
+text-decoration: none;
+font-weight: bold;
+}
+
+.extra-links a:hover {
+text-decoration: underline;
+}
+
+  
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+    /* Responsive */
+@media (max-width: 768px) {
+.container {
+flex-direction: column;
+margin: 20px;
+}
+.image-side {
+height: 200px;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Left Image -->
+<div class="image-side"></div>
+
+  <!-- Right Signup Form -->
+<div class="signup-container">
+<div class="signup-box">
+<h2>Sign Up</h2>
+<form onsubmit="return signupCheck()">
+<label>Full Name</label>
+<input type="text" id="signupName" placeholder="Enter your full name">
+<label>Email</label>
+<input type="email" id="signupEmail" placeholder="Enter your email">
+<label>Password</label>
+<input type="password" id="signupPassword" placeholder="Enter your password">
+<label>Confirm Password</label>
+<input type="password" id="signupConfirm" placeholder="Confirm your password">
+<button type="submit" class="btn">Sign Up</button>
+</form>
+
+<div class="extra-links">
+<p>Already have an account? <a href="Loginpage.html">Login</a></p>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+function signupCheck() {
+  let name = document.getElementById("signupName").value.trim();
+  let email = document.getElementById("signupEmail").value.trim();
+  let password = document.getElementById("signupPassword").value;
+  let confirm = document.getElementById("signupConfirm").value;
+
+  let pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (name === "") {
+    alert("Name is required!");
+    return false;
+  }
+  if (!pattern.test(email)) {
+    alert("Invalid Email format!");
+    return false;
+  }
+  if (password.length < 8) {
+    alert("Password must be at least 8 characters long!");
+    return false;
+  }
+  if (password !== confirm) {
+    alert("Passwords do not match!");
+    return false;
+  }
+
+  alert("Signup Successful! You can now login.");
+  return true;
+}
+</script>
+
+</body>
+</html>
